@@ -49,7 +49,7 @@ fi
 
 function rvim() {
     sheet=$(cat "$VIM_FILE")
-    line=$(echo "$sheet" | rofi -dmenu -p "vim command" -i -font "mono 23" -width 100 -location 1 -lines 15)
+    line=$(echo "$sheet" | rofi -dmenu -p "vim command" -i -font "mono 12" -width 100 -location 1 -lines 15)
     exit_code=$?
 
     line=($line)
