@@ -11,6 +11,8 @@
 #        $ rofi-vim
 #
 
+theme="$HOME/.config/rofi/themes/helpmenu.rasi"
+ 
 # Where to save the cheat sheet.
 VIM_FILE="$HOME/.cache/vimcheat.txt"
 
@@ -49,7 +51,7 @@ fi
 
 function rvim() {
     sheet=$(cat "$VIM_FILE")
-    line=$(echo "$sheet" | rofi -dmenu -p "vim command" -i -font "mono 12" -width 100 -location 1 -lines 15)
+    line=$(echo "$sheet" | rofi -dmenu -p "vim command" -i -theme "$theme" -location 1 -lines 15)
     exit_code=$?
 
     line=($line)
