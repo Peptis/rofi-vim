@@ -52,7 +52,7 @@ fi
 function rvim() {
     # Note: Need to specify case insensitive '-i' on the command line in dmenu mode
     sheet=$(cat "$VIM_FILE")
-    line=$(echo "$sheet" | rofi -dmenu -i -p "vim" -config "$rofi_config")
+    line=$(echo "$sheet" | rofi -dmenu -i -p "" -config "$rofi_config")
     exit_code=$?
 
     line=($line)
@@ -60,7 +60,7 @@ function rvim() {
 
 function dvim() {
     sheet=$(cat "$VIM_FILE")
-    line=$(echo "$sheet" | dmenu -fn "mono 23" -p "vim" -i -l 15) 
+    line=$(echo "$sheet" | dmenu -fn "mono 23" -p "" -i -l 15) 
     exit_code=$?
 
     line=($line)
