@@ -50,8 +50,9 @@ if [ ! -f "$VIM_FILE" ] || [ $((CURRENT_TIME - `stat -c %Y $VIM_FILE`)) -gt 4320
 fi
 
 function rvim() {
+    # Note: Need to specify case insensitive '-i' on the command line in dmenu mode
     sheet=$(cat "$VIM_FILE")
-    line=$(echo "$sheet" | rofi -dmenu -p "vim" -config "$rofi_config")
+    line=$(echo "$sheet" | rofi -dmenu -i -p "vim" -config "$rofi_config")
     exit_code=$?
 
     line=($line)
