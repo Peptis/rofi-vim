@@ -11,7 +11,7 @@
 #        $ rofi-vim
 #
 
-rofi_config="$HOME/.config/rofi/configs/helpmenu.rasi"
+rofi_config="$HOME/repositories/dotfiles/config/rofi/configs/helpmenu.rasi"
  
 # Where to save the cheat sheet.
 VIM_FILE="$HOME/.cache/vimcheat.txt"
